@@ -46,7 +46,7 @@ class ViewController: UIViewController {
             
         }
      
-        outputLabel.text = "0 "
+        outputLabel.text = "0"
     }
     
     @IBAction func numberButton(_ sender: UIButton) {
@@ -80,6 +80,19 @@ class ViewController: UIViewController {
     @IBAction func onEqualPressed(_ sender: UIButton) {
         processOperation(operation: currentOperation)
     }
+    
+    @IBAction func clearPressed(_ sender: UIButton) {
+        
+        currentOperation = Operation.Empty
+        runningNumber = ""
+        leftValString = ""
+        rightValString = ""
+        result = ""
+        
+        outputLabel.text = "0"
+
+    }
+    
     
     func playSound() {
         
